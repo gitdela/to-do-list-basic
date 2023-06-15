@@ -35,6 +35,10 @@
           />
           <h4>Pick a category</h4>
           <div class="cat-options">
+            <!-- these input types are radio because double clicking won't select and deselect it -->
+            <!-- also, we need at least one of them selected at anytime -->
+            <!-- we don't need both to be empty when adding a list -->
+            <!-- because we need to add that list to a category -->
             <label
               ><input
                 type="radio"
@@ -67,39 +71,44 @@
 
       <section class="todo-list">
         <h3>TODO LIST</h3>
-        <div class="list" id="list">
-          <div class="list-item">
-            <label>
-              <input type="radio" />
-              <span class="bubble business"></span>
-            </label>
-            <div class="todo-content">
-              <input type="text" value="Complete Milestone 6" readonly />
-            </div>
-            <div class="list-actions">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
-            </div>
-          </div>
-        </div>
-        <div class="list" id="list">
-          <div class="list-item">
-            <label>
-              <input type="radio" />
-              <span class="bubble personal"></span>
-            </label>
-            <div class="todo-content">
-              <input type="text" value="Learn Data Structures" readonly />
-            </div>
-            <div class="list-actions">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
-            </div>
-          </div>
-        </div>
+        <div class="list" id="list"></div>
       </section>
     </main>
 
     <script src="main.js"></script>
   </body>
 </html>
+
+<!-- <div class="list-item">
+  this label is a checkbox because clicking on it twice will select and deselect
+  that is a behavior we need on the to-do list
+  <label>
+    <input type="checkbox" />
+    <span class="bubble business"></span>
+  </label>
+  <div class="todo-content">
+    <input type="text" value="Complete Milestone 6" readonly />
+  </div>
+  <div class="list-actions">
+    <button class="edit">Edit</button>
+    <button class="delete">Delete</button>
+  </div>
+</div>
+</div>
+<div class="list" id="list">
+<div class="list-item">
+  this label is a checkbox because clicking on it twice will select and deselect
+  and also, we don't really need any of the list items selected
+  that is a behavior we need on the to-do list
+  <label>
+    <input type="checkbox" />
+    <span class="bubble personal"></span>
+  </label>
+  <div class="todo-content">
+    <input type="text" value="Learn Data Structures" readonly />
+  </div>
+  <div class="list-actions">
+    <button class="edit">Edit</button>
+    <button class="delete">Delete</button>
+  </div>
+</div> -->
