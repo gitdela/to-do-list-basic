@@ -215,8 +215,12 @@ input:checked ~ .bubble::after {
   background-color: #e6605e;
 }
 
+/* inside the list, we need the most recent addition to be at the top */
+/* so the column needs to be reversed */
 .todo-list .list {
   margin: 1rem 0;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .todo-list .list-item {
