@@ -16,7 +16,7 @@
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   /* radius */
-  --radius: 0.5rem;
+  --radius: 0.2rem;
 
   /* glow */
   /* special shadow */
@@ -53,6 +53,11 @@ body {
   width: 100%;
 }
 
+main {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
 section {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -68,7 +73,7 @@ h3 {
 
 h4 {
   color: var(--gray);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -85,6 +90,7 @@ h4 {
 /* the name coming needs to take rest of the space */
 .cus-greet-con .cus-greet-title input {
   margin-left: 0.5rem;
+  width: 100%;
   flex: 1 1 0%;
 }
 
@@ -94,6 +100,10 @@ h4 {
   color: var(--dark);
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+h2 span {
+  white-space: nowrap;
 }
 
 .cr-todo-con input[type='text'] {
@@ -283,3 +293,196 @@ input:checked ~ .bubble::after {
   text-decoration: line-through;
   color: var(--gray);
 }
+
+@media (max-width: 369px) {
+  main {
+    max-width: 100%;
+  }
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .cus-greet-con .cus-greet-title,
+  .cus-greet-con .cus-greet-title input {
+    font-size: 1.2rem;
+  }
+  .cus-greet-con .cus-greet-title input {
+    margin-left: 0.5rem;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }
+  h4 {
+    font-size: 0.7rem;
+  }
+  .cr-todo-con input[type='text'] {
+    font-size: 0.8rem;
+    padding: 0.9rem 0.8rem;
+  }
+  .cr-todo-con .cat-options {
+    gap: 0.8rem;
+  }
+  .cr-todo-con .cat-options label {
+    padding: 1rem;
+  }
+  .bubble {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--business);
+  }
+  /*notice that the after is always half of the original so it fits well */
+  input:checked ~ .bubble::after {
+    width: 8px;
+    height: 8px;
+  }
+  .cr-todo-con .cat-options label div {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  .cr-todo-con input[type='submit'] {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+  .todo-list .list-item {
+    padding: 0.6rem;
+    margin-bottom: 0.7rem;
+  }
+  .list-item label {
+    margin-right: 0.6rem;
+  }
+  .list-item .todo-content input {
+    font-size: 0.9rem;
+  }
+  .list-item .list-actions button {
+    padding: 0.2rem;
+    font-size: x-small;
+  }
+  .list-item .list-actions .edit {
+    display: none;
+  }
+  .list-item .list-actions .delete {
+    padding: 0.2rem 0.3rem 0.3rem 0.2rem;
+    /* margin-right: 0.2rem; */
+  }
+}
+
+@media (min-width: 370px) and (max-width: 541px) {
+  main {
+    max-width: 100%;
+  }
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .cus-greet-con .cus-greet-title,
+  .cus-greet-con .cus-greet-title input {
+    font-size: 1.4rem;
+  }
+  .cus-greet-con .cus-greet-title input {
+    margin-left: 0.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  h4 {
+    font-size: 0.9rem;
+  }
+  .cr-todo-con input[type='text'] {
+    font-size: 1rem;
+    padding: 0.9rem 0.8rem;
+  }
+  .cr-todo-con .cat-options {
+    gap: 0.8rem;
+  }
+  .cr-todo-con .cat-options label {
+    padding: 1rem;
+  }
+  .bubble {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--business);
+  }
+  /*notice that the after is always half of the original so it fits well */
+  input:checked ~ .bubble::after {
+    width: 8px;
+    height: 8px;
+  }
+  .cr-todo-con .cat-options label div {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  .cr-todo-con input[type='submit'] {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+  .todo-list .list-item {
+    padding: 0.98rem;
+    margin-bottom: 0.7rem;
+  }
+  .list-item label {
+    margin-right: 0.6rem;
+  }
+  .list-item .todo-content input {
+    font-size: 1rem;
+  }
+  .list-item .list-actions button {
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+  }
+  .list-item .list-actions .edit {
+    display: none;
+  }
+  .list-item .list-actions .delete {
+    padding: 0.2rem 0.4rem 0.3rem 0.4rem;
+    font-size: x-small;
+  }
+}
+@media (min-width: 542px) and (max-width: 960px) {
+  main {
+    max-width: 95%;
+  }
+  .cr-todo-con .cat-options {
+    gap: 0.8rem;
+  }
+  .list-item .list-actions button {
+    padding: 1rem 1.5rem;
+    border-radius: 0.2rem;
+  }
+  .list-item .list-actions .delete {
+    padding: 0.2rem 0.4rem 0.3rem 0.4rem;
+  }
+  .list-item .list-actions .edit {
+    padding: 0.2rem 0.4rem 0.3rem 0.4rem;
+  }
+}
+@media (min-width: 961px) and (max-width: 1279px) {
+  main {
+    max-width: 60%%;
+  }
+  .cr-todo-con .cat-options {
+    gap: 0.8rem;
+  }
+  .list-item .list-actions button {
+    padding: 1rem 1.5rem;
+    border-radius: 0.2rem;
+  }
+  .list-item .list-actions .delete {
+    padding: 0.2rem 0.4rem 0.3rem 0.4rem;
+  }
+  .list-item .list-actions .edit {
+    display: none;
+  }
+}
+
+/* iphone 4 320
+/* samsung s8 360
+/* iphone se/6/7/8 375
+/* iphone 12 pro 390
+/* pixel 5 393
+/* samsung s20 412
+/* iphone xr 414
+/* ipad mini 768
+/* ipad air 820 */
