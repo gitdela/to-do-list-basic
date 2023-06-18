@@ -1,14 +1,15 @@
 # Todo List App
 
+## Description
+
+A simple todo list application that allows users to customize it with their name, add, edit, and delete tasks. The app uses local storage to persist data, ensuring that the list and user's name are saved even when the browser is closed or the computer is shut down.
+You can access the project online here https://gitdela.github.io/to-do-list-basic/
+
 ## Technologies Used
 
 - JavaScript
 - HTML
 - CSS
-
-## Description
-
-A simple todo list application that allows users to customize it with their name, add, edit, and delete tasks. The app uses local storage to persist data, ensuring that the list and user's name are saved even when the browser is closed or the computer is shut down.
 
 ## Features
 
